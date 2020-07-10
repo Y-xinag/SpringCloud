@@ -1,7 +1,7 @@
 spring: 
   profiles:
     active:
-    - test
+    - dev
 --- 
 server:
   port: 8001
@@ -9,11 +9,11 @@ mybatis:
   config-location: classpath:mybatis/mybatis-config.xml       # mybatis配置文件所在路径
   type-aliases-package: com.xr.model    # 所有Entity别名类所在包
   mapper-locations:
-    - classpath*:mybatis/mappers/*.xml                       # mapper映射文件
+    - classpath:mybatis/mappers/*.xml                       # mapper映射文件
 spring:
   profiles: dev
   application:
-    name: microservicecloud-dept
+    name: microservicecloud-config-dept-client
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
     driver-class-name: com.mysql.jdbc.Driver              # mysql驱动包
